@@ -5,18 +5,19 @@
   
 
   
-  <title>Hello World | Mio‘s blog</title>
+  <title>book | Mio‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Deep learning with Differential Privacy 一、Introduction  这篇文章讲了什么？  作者用实验证明了深度神经网络算法也可以在 modest cost 下实现 privacy protection。   如何实现 differential privacy？  对 SGD-Algorithm 进行改进，在计算 gradient 时引入 Guass No">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/01/30/hello-world/index.html">
+<meta property="og:title" content="book">
+<meta property="og:url" content="http://yoursite.com/2020/01/31/book/index.html">
 <meta property="og:site_name" content="Mio‘s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Deep learning with Differential Privacy 一、Introduction  这篇文章讲了什么？  作者用实验证明了深度神经网络算法也可以在 modest cost 下实现 privacy protection。   如何实现 differential privacy？  对 SGD-Algorithm 进行改进，在计算 gradient 时引入 Guass No">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-30T14:11:09.714Z">
-<meta property="article:modified_time" content="2020-01-30T14:11:09.714Z">
+<meta property="article:published_time" content="2020-01-31T12:12:16.000Z">
+<meta property="article:modified_time" content="2020-01-31T12:19:39.124Z">
 <meta property="article:author" content="Mio">
+<meta property="article:tag" content="differential privacy">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Mio‘s blog" type="application/atom+xml">
@@ -70,10 +71,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-book" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/01/30/hello-world/" class="article-date">
-  <time datetime="2020-01-30T14:11:09.714Z" itemprop="datePublished">2020-01-30</time>
+    <a href="/2020/01/31/book/" class="article-date">
+  <time datetime="2020-01-31T12:12:16.000Z" itemprop="datePublished">2020-01-31</time>
 </a>
     
   </div>
@@ -84,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      book
     </h1>
   
 
@@ -92,42 +93,92 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Deep-learning-with-Differential-Privacy">Deep learning with Differential Privacy</h1>
+<h2 id="一、Introduction">一、Introduction</h2>
+<ul>
+<li>这篇文章讲了什么？
+<ul>
+<li>作者用实验证明了深度神经网络算法也可以在 modest cost 下实现 privacy protection。</li>
+</ul>
+</li>
+<li><strong>如何实现 differential privacy</strong>？
+<ul>
+<li>对 SGD-Algorithm 进行改进，在计算 gradient 时引入 Guass Noise( 服从正态分布的随机变量 )，并利用  moment accountant  对该过程中产生的 privacy loss 进行统计。</li>
+</ul>
+</li>
+<li>为什么提出 moment accountant 这样一个新的技巧？
+<ul>
+<li>moments accountant is more computational efficient</li>
+<li>可以得到关于 privacy loss 的 much tighter estimates
+<ul>
+<li>eg 在实验中可以把 epsilon 从 9.34 降到 1.26</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>该 隐私保护技术 基于什么样的<strong>假设</strong>？
+<ul>
+<li>假设 adversary with full knowledge of the training mechanism &amp; access to the model’s parameters
+<ul>
+<li>在我们尝试保护的一条数据里，假设 adversary 知道剩下所有条数据</li>
+<li>假设是基于 models on-device
+<ul>
+<li>比如手机上为了追求 model 速度，会将模型放在本机而非云上，这过程会暴露了整个模型的参数给 adversary</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>foundation
+<ul>
+<li>传统的 machine learning model
+<ul>
+<li>regularization techniques
+<ul>
+<li>阻止 overfitting 的同时也隐藏了 detailed info</li>
+</ul>
+</li>
+<li>black-box 也 encode 了很多信息</li>
+</ul>
+</li>
+<li>以前的攻击
+<ul>
+<li>model-inversion attack
+<ul>
+<li>从 facial recognition system 里面恢复图片
+<ul>
+<li>仅仅通过 black-box access to a trained model</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=""></h2>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/30/hello-world/" data-id="ck6250az30001qwq31l8t9r5g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/01/31/book/" data-id="ck6250ayv0000qwq3d5bghtgj" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/01/31/book/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          book
-        
-      </div>
-    </a>
   
+    <a href="/2020/01/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
 </nav>
 
