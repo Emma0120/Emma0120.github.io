@@ -5,14 +5,19 @@
   
 
   
-  <title>Mio‘s blog</title>
+  <title>GRE备考指南 | Mio‘s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mio‘s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="背单词  使用 考满分GRE3000词 这个软件的词频乱序新版进行背诵 一天背200-300个单词 会读一遍其中的近义词 和 反义词 相关 等词，这个跟GRE考同义词的思路相关，做题可能用得上 一定要使用下面的遗忘曲线进行今日复习  我会优先复习再学习新词 保证所有词都得到充分的复习     Verbal  在所有单词都背过一遍之后 使用《张巍的GRE填空机经1250题.pdf》开始刷题  倒着">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GRE备考指南">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/GRE%E5%A4%87%E8%80%83%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Mio‘s blog">
+<meta property="og:description" content="背单词  使用 考满分GRE3000词 这个软件的词频乱序新版进行背诵 一天背200-300个单词 会读一遍其中的近义词 和 反义词 相关 等词，这个跟GRE考同义词的思路相关，做题可能用得上 一定要使用下面的遗忘曲线进行今日复习  我会优先复习再学习新词 保证所有词都得到充分的复习     Verbal  在所有单词都背过一遍之后 使用《张巍的GRE填空机经1250题.pdf》开始刷题  倒着">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-01T13:24:04.000Z">
+<meta property="article:modified_time" content="2020-02-01T13:28:50.494Z">
 <meta property="article:author" content="Mio">
+<meta property="article:tag" content="GRE, 英语学习">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Mio‘s blog" type="application/atom+xml">
@@ -66,9 +71,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-GRE备考指南" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-GRE备考指南" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/01/GRE%E5%A4%87%E8%80%83%E6%8C%87%E5%8D%97/" class="article-date">
   <time datetime="2020-02-01T13:24:04.000Z" itemprop="datePublished">2020-02-01</time>
@@ -81,8 +84,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/01/GRE%E5%A4%87%E8%80%83%E6%8C%87%E5%8D%97/">GRE备考指南</a>
+    <h1 class="article-title" itemprop="name">
+      GRE备考指南
     </h1>
   
 
@@ -192,165 +195,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-book" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/book/" class="article-date">
-  <time datetime="2020-01-31T12:12:16.000Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/book/">book</a>
-    </h1>
+    <a href="/2020/01/31/book/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">book</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Deep-learning-with-Differential-Privacy">Deep learning with Differential Privacy</h1>
-<h2 id="一、Introduction">一、Introduction</h2>
-<ul>
-<li>这篇文章讲了什么？
-<ul>
-<li>作者用实验证明了深度神经网络算法也可以在 modest cost 下实现 privacy protection。</li>
-</ul>
-</li>
-<li><strong>如何实现 differential privacy</strong>？
-<ul>
-<li>对 SGD-Algorithm 进行改进，在计算 gradient 时引入 Guass Noise( 服从正态分布的随机变量 )，并利用  moment accountant  对该过程中产生的 privacy loss 进行统计。</li>
-</ul>
-</li>
-<li>为什么提出 moment accountant 这样一个新的技巧？
-<ul>
-<li>moments accountant is more computational efficient</li>
-<li>可以得到关于 privacy loss 的 much tighter estimates
-<ul>
-<li>eg 在实验中可以把 epsilon 从 9.34 降到 1.26</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>该 隐私保护技术 基于什么样的<strong>假设</strong>？
-<ul>
-<li>假设 adversary with full knowledge of the training mechanism &amp; access to the model’s parameters
-<ul>
-<li>在我们尝试保护的一条数据里，假设 adversary 知道剩下所有条数据</li>
-<li>假设是基于 models on-device
-<ul>
-<li>比如手机上为了追求 model 速度，会将模型放在本机而非云上，这过程会暴露了整个模型的参数给 adversary</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>foundation
-<ul>
-<li>传统的 machine learning model
-<ul>
-<li>regularization techniques
-<ul>
-<li>阻止 overfitting 的同时也隐藏了 detailed info</li>
-</ul>
-</li>
-<li>black-box 也 encode 了很多信息</li>
-</ul>
-</li>
-<li>以前的攻击
-<ul>
-<li>model-inversion attack
-<ul>
-<li>从 facial recognition system 里面恢复图片
-<ul>
-<li>仅仅通过 black-box access to a trained model</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id=""></h2>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/book/" data-id="ck63mw0vz0000onq34tajd2pd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/30/hello-world/" class="article-date">
-  <time datetime="2020-01-30T14:11:09.714Z" itemprop="datePublished">2020-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/30/hello-world/" data-id="ck63mw0wf0003onq3gk1x7abg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
